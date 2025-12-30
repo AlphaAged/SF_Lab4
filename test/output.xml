@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.3 on win32)" generated="2025-12-31T05:45:43.751660" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\User\Documents\GitHub\SF_Lab4\test\test.robot">
+<test id="s1-t1" name="Open And Login" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:45:43.895737" level="INFO">Opening browser 'Chrome' to base url 'file:///C:/Users/User/Documents/GitHub/SF_Lab4/StarterFiles/Registration.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-31T05:45:43.895475" elapsed="1.067222"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-31T05:45:44.962982" elapsed="0.033890"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input[name="firstname"]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-31T05:45:44.997083" elapsed="0.018186"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:45:45.015623" level="INFO">Typing text 'Pheeratchai' into text field 'css=input[name="firstname"]'.</msg>
+<arg>css=input[name="firstname"]</arg>
+<arg>Pheeratchai</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-31T05:45:45.015469" elapsed="0.055250"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:45:45.071224" level="INFO">Typing text 'Suepsing' into text field 'css=input[name="lastname"]'.</msg>
+<arg>css=input[name="lastname"]</arg>
+<arg>Suepsing</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-31T05:45:45.071045" elapsed="0.042767"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:45:45.114224" level="INFO">Typing text 'College of computing' into text field 'css=input[name="organization"]'.</msg>
+<arg>css=input[name="organization"]</arg>
+<arg>College of computing</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-31T05:45:45.114067" elapsed="0.050443"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:45:45.164945" level="INFO">Typing text 'pheeratchai.s@kkumail.com' into text field 'css=input[name="email"]'.</msg>
+<arg>css=input[name="email"]</arg>
+<arg>pheeratchai.s@kkumail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-31T05:45:45.164783" elapsed="0.055985"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:45:45.221195" level="INFO">Typing text '0864575111' into text field 'css=input[name="phone"]'.</msg>
+<arg>css=input[name="phone"]</arg>
+<arg>0864575111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-31T05:45:45.221021" elapsed="0.077449"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:45:45.298953" level="INFO">Clicking button 'id=registerButton'.</msg>
+<arg>id=registerButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-31T05:45:45.298751" elapsed="0.042840"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Thank you for registering with us.</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-31T05:45:45.341938" elapsed="0.010815"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-31T05:45:45.353063" elapsed="2.075309"/>
+</kw>
+<status status="PASS" start="2025-12-31T05:45:43.894597" elapsed="3.534043"/>
+</test>
+<status status="PASS" start="2025-12-31T05:45:43.752917" elapsed="3.676517"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
