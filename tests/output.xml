@@ -1,57 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.3 on win32)" generated="2025-12-31T05:03:33.441107" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="C:\Users\User\Documents\GitHub\SF_Lab4\tests\test.robot">
-<test id="s1-t1" name="Open And Login" line="9">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-31T05:03:33.587236" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<robot generator="Robot 7.4.1 (Python 3.13.3 on win32)" generated="2025-12-31T05:16:43.341636" rpa="false" schemaversion="5">
+<suite id="s1" name="Webdriver" source="C:\Users\User\Documents\GitHub\SF_Lab4\tests\webdriver.robot">
+<test id="s1-t1" name="TC_001 Start Chrome For Testing" line="10">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-31T05:16:43.485728" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002711EB9DA90&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-31T05:16:43.485411" elapsed="0.000343"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-31T05:16:43.486285" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x000002711EB9D6A0&gt;</msg>
+<var>${service}</var>
+<arg>sys.modules["selenium.webdriver.chrome.service"].Service(executable_path=r"${CHROME_DRIVER_PATH}")</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-31T05:16:43.485900" elapsed="0.000406"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:16:43.486644" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<arg>service=${service}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-12-31T05:16:43.486427" elapsed="0.999570"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:16:44.486325" level="INFO">Opening url 'https://www.kku.ac.th'</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-31T05:03:33.587065" elapsed="4.541064"/>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-12-31T05:16:44.486206" elapsed="1.112591"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-31T05:03:38.128464" elapsed="0.024124"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>css=input[name="username"]</arg>
-<arg>15s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-12-31T05:03:38.152856" elapsed="0.469748"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-31T05:03:38.622988" level="INFO">Typing text 'Admin' into text field 'css=input[name="username"]'.</msg>
-<arg>css=input[name="username"]</arg>
-<arg>Admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-31T05:03:38.622815" elapsed="0.038305"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-31T05:03:38.661540" level="INFO">Typing text 'admin123' into text field 'css=input[name="password"]'.</msg>
-<arg>css=input[name="password"]</arg>
-<arg>admin123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-31T05:03:38.661360" elapsed="0.041134"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-31T05:03:38.702890" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
-<arg>css=button[type="submit"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-31T05:03:38.702728" elapsed="0.040423"/>
-</kw>
-<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>Dashboard</arg>
-<arg>15s</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-12-31T05:03:38.743390" elapsed="1.789124"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-31T05:16:48.599625" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-31T05:16:45.599010" elapsed="3.000801"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-31T05:03:40.532864" elapsed="2.091332"/>
+<status status="PASS" start="2025-12-31T05:16:48.600409" elapsed="2.100466"/>
 </kw>
-<status status="PASS" start="2025-12-31T05:03:33.586447" elapsed="9.038099"/>
+<status status="PASS" start="2025-12-31T05:16:43.484842" elapsed="7.216228"/>
 </test>
-<status status="PASS" start="2025-12-31T05:03:33.442050" elapsed="9.183250"/>
+<status status="PASS" start="2025-12-31T05:16:43.342536" elapsed="7.358946"/>
 </suite>
 <statistics>
 <total>
@@ -60,7 +53,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+<stat name="Webdriver" id="s1" pass="1" fail="0" skip="0">Webdriver</stat>
 </suite>
 </statistics>
 <errors>

@@ -2,8 +2,8 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${CHROME_BROWSER_PATH}    C:\\Users\\User\\Documents\\GitHub\\SF_Lab4\\ChromeForTesting\\chrome-win64\\chrome-win64\\chrome.exe
-${CHROME_DRIVER_PATH}     C:\\Users\\User\\Documents\\GitHub\\SF_Lab4\\ChromeForTesting\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe
+${CHROME_BROWSER_PATH}    C:\\file for study\\soft en\\ChromeForTesting\\chrome-win64\\chrome-win64\\chrome.exe
+${CHROME_DRIVER_PATH}     C:\\file for study\\soft en\\ChromeForTesting\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe
 ${URL}                    https://www.kku.ac.th
 
 *** Test Cases ***
