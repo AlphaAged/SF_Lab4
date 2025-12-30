@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.3 on win32)" generated="2025-12-31T04:58:51.546357" rpa="false" schemaversion="5">
+<suite id="s1" name="Webdriver" source="C:\Users\User\Documents\GitHub\SF_Lab4\tests\webdriver.robot">
+<test id="s1-t1" name="TC_001 Start Chrome For Testing" line="10">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-31T04:58:51.698639" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001B981031A90&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-31T04:58:51.698302" elapsed="0.000365"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-31T04:58:51.699391" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x000001B9810316A0&gt;</msg>
+<var>${service}</var>
+<arg>sys.modules["selenium.webdriver.chrome.service"].Service(executable_path=r"${CHROME_DRIVER_PATH}")</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-31T04:58:51.698875" elapsed="0.000548"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-12-31T04:58:51.700024" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<arg>service=${service}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-12-31T04:58:51.699659" elapsed="1.049623"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-12-31T04:58:52.749684" level="INFO">Opening url 'https://www.kku.ac.th'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-12-31T04:58:52.749537" elapsed="1.286392"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-31T04:58:57.036885" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-31T04:58:54.036129" elapsed="3.000849"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-31T04:58:57.037452" elapsed="2.094983"/>
+</kw>
+<status status="PASS" start="2025-12-31T04:58:51.697703" elapsed="7.434968"/>
+</test>
+<status status="PASS" start="2025-12-31T04:58:51.547659" elapsed="7.585835"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Webdriver" id="s1" pass="1" fail="0" skip="0">Webdriver</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

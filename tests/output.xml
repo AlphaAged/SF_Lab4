@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.3 on win32)" generated="2025-12-31T05:03:33.441107" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\User\Documents\GitHub\SF_Lab4\tests\test.robot">
+<test id="s1-t1" name="Open And Login" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:03:33.587236" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-31T05:03:33.587065" elapsed="4.541064"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-31T05:03:38.128464" elapsed="0.024124"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input[name="username"]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-31T05:03:38.152856" elapsed="0.469748"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:03:38.622988" level="INFO">Typing text 'Admin' into text field 'css=input[name="username"]'.</msg>
+<arg>css=input[name="username"]</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-31T05:03:38.622815" elapsed="0.038305"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:03:38.661540" level="INFO">Typing text 'admin123' into text field 'css=input[name="password"]'.</msg>
+<arg>css=input[name="password"]</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-31T05:03:38.661360" elapsed="0.041134"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-12-31T05:03:38.702890" level="INFO">Clicking button 'css=button[type="submit"]'.</msg>
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-31T05:03:38.702728" elapsed="0.040423"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-31T05:03:38.743390" elapsed="1.789124"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-31T05:03:40.532864" elapsed="2.091332"/>
+</kw>
+<status status="PASS" start="2025-12-31T05:03:33.586447" elapsed="9.038099"/>
+</test>
+<status status="PASS" start="2025-12-31T05:03:33.442050" elapsed="9.183250"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
