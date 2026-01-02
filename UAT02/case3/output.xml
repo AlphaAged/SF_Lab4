@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.3 on win32)" generated="2026-01-02T22:41:28.582240" rpa="false" schemaversion="5">
+<suite id="s1" name="UAT02 3" source="C:\Users\User\Documents\GitHub\SF_Lab4\UAT02\case3\UAT02_3.robot">
+<test id="s1-t1" name="Open And Login" line="11">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-01-02T22:41:28.740265" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\User\Documents\GitHub\SF_Lab4\UAT02\case3\Screenshot"&gt;C:\Users\User\Documents\GitHub\SF_Lab4\UAT02\case3\Screenshot&lt;/a&gt;'.</msg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-01-02T22:41:28.739885" elapsed="0.000465"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:28.740734" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:7272/StarterFiles/Registration.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-02T22:41:28.740587" elapsed="1.356977"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-02T22:41:30.097808" elapsed="0.032781"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:30.202657" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/open_registration.png"&gt;&lt;img src="Screenshot/open_registration.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}/open_registration.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-02T22:41:30.130797" elapsed="0.071966"/>
+</kw>
+<status status="PASS" start="2026-01-02T22:41:28.739184" elapsed="1.463838"/>
+</test>
+<test id="s1-t2" name="Empty First Name and Last Name" line="17">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input[name="firstname"]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-02T22:41:30.203767" elapsed="0.012648"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:30.216770" level="INFO">Typing text 'CS KKU' into text field 'css=input[name="organization"]'.</msg>
+<arg>css=input[name="organization"]</arg>
+<arg>CS KKU</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:41:30.216621" elapsed="0.056240"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:30.273284" level="INFO">Typing text 'somyod@kkumail.com' into text field 'css=input[name="email"]'.</msg>
+<arg>css=input[name="email"]</arg>
+<arg>somyod@kkumail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:41:30.273102" elapsed="0.060673"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:30.334215" level="INFO">Typing text '091-001-1234' into text field 'css=input[name="phone"]'.</msg>
+<arg>css=input[name="phone"]</arg>
+<arg>091-001-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:41:30.334046" elapsed="0.045593"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:30.380056" level="INFO">Clicking button 'id=registerButton'.</msg>
+<arg>id=registerButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:41:30.379896" elapsed="0.041048"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Please enter your name!!</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-02T22:41:30.421166" elapsed="0.006350"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:30.495402" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/result_without_name.png"&gt;&lt;img src="Screenshot/result_without_name.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}/result_without_name.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-02T22:41:30.427707" elapsed="0.067779"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-02T22:41:30.495749" elapsed="2.079128"/>
+</kw>
+<status status="PASS" start="2026-01-02T22:41:30.203465" elapsed="2.371784"/>
+</test>
+<test id="s1-t3" name="Empty Email" line="31">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-01-02T22:41:32.576420" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\User\Documents\GitHub\SF_Lab4\UAT02\case3\Screenshot"&gt;C:\Users\User\Documents\GitHub\SF_Lab4\UAT02\case3\Screenshot&lt;/a&gt;' already exists.</msg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-01-02T22:41:32.576223" elapsed="0.000232"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:32.576684" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:7272/StarterFiles/Registration.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-02T22:41:32.576576" elapsed="1.338871"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-02T22:41:33.915687" elapsed="0.031318"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input[name="firstname"]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-02T22:41:33.947296" elapsed="0.012329"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:33.959963" level="INFO">Typing text 'Somyod' into text field 'css=input[name="firstname"]'.</msg>
+<arg>css=input[name="firstname"]</arg>
+<arg>Somyod</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:41:33.959823" elapsed="0.053036"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:34.013375" level="INFO">Typing text 'Sodsai' into text field 'css=input[name="lastname"]'.</msg>
+<arg>css=input[name="lastname"]</arg>
+<arg>Sodsai</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:41:34.013133" elapsed="0.040818"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:34.054529" level="INFO">Typing text 'CS KKU' into text field 'css=input[name="organization"]'.</msg>
+<arg>css=input[name="organization"]</arg>
+<arg>CS KKU</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:41:34.054272" elapsed="0.041324"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:34.096066" level="INFO">Typing text '091-001-1234' into text field 'css=input[name="phone"]'.</msg>
+<arg>css=input[name="phone"]</arg>
+<arg>091-001-1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:41:34.095861" elapsed="0.044402"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:34.140862" level="INFO">Clicking button 'id=registerButton'.</msg>
+<arg>id=registerButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:41:34.140595" elapsed="0.043742"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Please enter your email!!</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-02T22:41:34.184808" elapsed="0.006367"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:41:34.242923" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/result_without_email.png"&gt;&lt;img src="Screenshot/result_without_email.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}/result_without_email.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-02T22:41:34.191371" elapsed="0.051629"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-02T22:41:34.243266" elapsed="2.074209"/>
+</kw>
+<status status="PASS" start="2026-01-02T22:41:32.575884" elapsed="3.741906"/>
+</test>
+<status status="PASS" start="2026-01-02T22:41:28.583279" elapsed="7.735128"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="UAT02 3" id="s1" pass="3" fail="0" skip="0">UAT02 3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.3 on win32)" generated="2026-01-02T22:52:49.644855" rpa="false" schemaversion="5">
+<suite id="s1" name="UAT02 5" source="C:\Users\User\Documents\GitHub\SF_Lab4\UAT02\case5\UAT02_5.robot">
+<test id="s1-t1" name="Open And Login" line="11">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-01-02T22:52:49.805596" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\User\Documents\GitHub\SF_Lab4\UAT02\case5\Screenshot"&gt;C:\Users\User\Documents\GitHub\SF_Lab4\UAT02\case5\Screenshot&lt;/a&gt;'.</msg>
+<arg>${SCREENSHOT_DIR}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-01-02T22:52:49.805213" elapsed="0.000445"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:52:49.805954" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:7272/StarterFiles/Registration.html'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-02T22:52:49.805828" elapsed="1.355501"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-02T22:52:51.161599" elapsed="0.031336"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:52:51.261739" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/open_registration.png"&gt;&lt;img src="Screenshot/open_registration.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}/open_registration.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-02T22:52:51.193158" elapsed="0.068662"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=input[name="firstname"]</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-02T22:52:51.262026" elapsed="0.013399"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:52:51.275797" level="INFO">Typing text 'Somyod' into text field 'css=input[name="firstname"]'.</msg>
+<arg>css=input[name="firstname"]</arg>
+<arg>Somyod</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:52:51.275635" elapsed="0.053433"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:52:51.329993" level="INFO">Typing text 'Sodsai' into text field 'css=input[name="lastname"]'.</msg>
+<arg>css=input[name="lastname"]</arg>
+<arg>Sodsai</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:52:51.329743" elapsed="0.043838"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:52:51.374032" level="INFO">Typing text 'CS KKU' into text field 'css=input[name="organization"]'.</msg>
+<arg>css=input[name="organization"]</arg>
+<arg>CS KKU</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:52:51.373816" elapsed="0.043470"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:52:51.417801" level="INFO">Typing text 'somyod@kkumail.com' into text field 'css=input[name="email"]'.</msg>
+<arg>css=input[name="email"]</arg>
+<arg>somyod@kkumail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:52:51.417590" elapsed="0.047583"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:52:51.465656" level="INFO">Typing text '1234' into text field 'css=input[name="phone"]'.</msg>
+<arg>css=input[name="phone"]</arg>
+<arg>1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:52:51.465496" elapsed="0.047961"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:52:51.578825" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshot/fill.png"&gt;&lt;img src="Screenshot/fill.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}/fill.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-01-02T22:52:51.513746" elapsed="0.065152"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:52:51.579211" level="INFO">Clicking button 'id=registerButton'.</msg>
+<arg>id=registerButton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-02T22:52:51.579080" elapsed="0.040599"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<msg time="2026-01-02T22:52:58.081050" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7b7c188e5
+	0x7ff7b7c18940
+	0x7ff7b79f165d
+	0x7ff7b79dd202
+	0x7ff7b7a027af
+	0x7ff7b7a79a29
+	0x7ff7b7a9a5c2
+	0x7ff7b7a3ac29
+	0x7ff7b7a3ba93
+	0x7ff7b7f30640
+	0x7ff7b7f2af80
+	0x7ff7b7f496e6
+	0x7ff7b7c35de4
+	0x7ff7b7c3ed8c
+	0x7ff7b7c22004
+	0x7ff7b7c221b5
+	0x7ff7b7c07ee2
+	0x7ffd06dce8d7
+	0x7ffd07e8c53c
+</msg>
+<msg time="2026-01-02T22:52:58.081680" level="FAIL">WebDriverException: Message: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=143.0.7499.170)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7b7c188e5
+	0x7ff7b7c18940
+	0x7ff7b79f1465
+	0x7ff7b79de550
+	0x7ff7b79dd40a
+	0x7ff7b7a027af
+	0x7ff7b7a79a29
+	0x7ff7b7a9a5c2
+	0x7ff7b7a3ac29
+	0x7ff7b7a3ba93
+	0x7ff7b7f30640
+	0x7ff7b7f2af80
+	0x7ff7b7f496e6
+	0x7ff7b7c35de4
+	0x7ff7b7c3ed8c
+	0x7ff7b7c22004
+	0x7ff7b7c221b5
+	0x7ff7b7c07ee2
+	0x7ffd06dce8d7
+	0x7ffd07e8c53c
+</msg>
+<arg>Please enter a valid phone number, e.g., 081-234-5678, 081 234 5678, or 081.234.5678)</arg>
+<arg>15s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="FAIL" start="2026-01-02T22:52:51.619904" elapsed="6.464834">WebDriverException: Message: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=143.0.7499.170)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7b7c188e5
+	0x7ff7b7c18940
+	0x7ff7b79f1465
+	0x7ff7b79de550
+	0x7ff7b79dd40a
+	0x7ff7b7a027af
+	0x7ff7b7a79a29
+	0x7ff7b7a9a5c2
+	0x7ff7b7a3ac29
+	0x7ff7b7a3ba93
+	0x7ff7b7f30640
+	0x7ff7b7f2af80
+	0x7ff7b7f496e6
+	0x7ff7b7c35de4
+	0x7ff7b7c3ed8c
+	0x7ff7b7c22004
+	0x7ff7b7c221b5
+	0x7ff7b7c07ee2
+	0x7ffd06dce8d7
+	0x7ffd07e8c53c
+</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>${SCREENSHOT_DIR}/result.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-01-02T22:52:58.085016" elapsed="0.000029"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-02T22:52:58.085369" elapsed="2.072343"/>
+</kw>
+<status status="FAIL" start="2026-01-02T22:52:49.804523" elapsed="10.353391">WebDriverException: Message: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=143.0.7499.170)
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7b7c188e5
+	0x7ff7b7c18940
+	0x7ff7b79f1465
+	0x7ff7b79de550
+	0x7ff7b79dd40a
+	0x7ff7b7a027af
+	0x7ff7b7a79a29
+	0x7ff7b7a9a5c2
+	0x7ff7b7a3ac29
+	0x7ff7b7a3ba93
+	0x7ff7b7f30640
+	0x7ff7b7f2af80
+	0x7ff7b7f496e6
+	0x7ff7b7c35de4
+	0x7ff7b7c3ed8c
+	0x7ff7b7c22004
+	0x7ff7b7c221b5
+	0x7ff7b7c07ee2
+	0x7ffd06dce8d7
+	0x7ffd07e8c53c
+</status>
+</test>
+<status status="FAIL" start="2026-01-02T22:52:49.646112" elapsed="10.512919"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="UAT02 5" id="s1" pass="0" fail="1" skip="0">UAT02 5</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-02T22:52:58.081050" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=143.0.7499.170); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7b7c188e5
+	0x7ff7b7c18940
+	0x7ff7b79f165d
+	0x7ff7b79dd202
+	0x7ff7b7a027af
+	0x7ff7b7a79a29
+	0x7ff7b7a9a5c2
+	0x7ff7b7a3ac29
+	0x7ff7b7a3ba93
+	0x7ff7b7f30640
+	0x7ff7b7f2af80
+	0x7ff7b7f496e6
+	0x7ff7b7c35de4
+	0x7ff7b7c3ed8c
+	0x7ff7b7c22004
+	0x7ff7b7c221b5
+	0x7ff7b7c07ee2
+	0x7ffd06dce8d7
+	0x7ffd07e8c53c
+</msg>
+</errors>
+</robot>
