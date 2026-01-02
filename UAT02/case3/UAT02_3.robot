@@ -16,13 +16,14 @@ Open And Login
     
     Wait Until Element Is Visible    css=input[name="firstname"]    15s
     Input Text    css=input[name="firstname"]    Somyod
-    Input Text    css=input[name="lastname"]    Sodsai
+    #Input Text    css=input[name="lastname"]    Sodsai
+    Input Text    css=input[name="organization"]    CS KKU
     Input Text    css=input[name="email"]    somyod@kkumail.com
     Input Text    css=input[name="phone"]    091-001-1234
     Capture Page Screenshot    ${SCREENSHOT_DIR}/fill.png
 
     Click Button  id=registerButton
-    Wait Until Page Contains    Thank you for registering with us.    15s
+    Wait Until Page Contains    Please enter your last name!!    15s
 
     Capture Page Screenshot    ${SCREENSHOT_DIR}/result.png
     [Teardown]    Close Browser
